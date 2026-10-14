@@ -4,14 +4,22 @@
 Aplicativos nativos e simples para lives no Windows. Design e direção de produto: João Rodrigues / Kira, com desenvolvimento assistido por IA.
 
 
-## Download: 0.2.0-beta.1
+## Download: 0.2.1-beta.1
 
 
-[Oruvex Cam](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.0-beta.1/Oruvex-Cam-0.2.0-beta.1-Windows.zip) · [Oruvex Voice](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.0-beta.1/Oruvex-Voice-0.2.0-beta.1-Windows.zip) · [Release e instruções](https://github.com/artssbykira/oruvex-apps/releases/tag/v0.2.0-beta.1)
+[Oruvex Cam](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.1-beta.1/Oruvex-Cam-0.2.1-beta.1-Windows.zip) · [Oruvex Voice](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.1-beta.1/Oruvex-Voice-0.2.1-beta.1-Windows.zip) · [Release e instruções](https://github.com/artssbykira/oruvex-apps/releases/tag/v0.2.1-beta.1)
 
 
 Beta gratuita para teste, não uma promessa de compatibilidade universal. Extraia o ZIP inteiro antes de executar. Binários ainda sem assinatura de código: não ignore alertas de segurança automaticamente.
 
+
+## Revisão 0.2.1-beta.1
+
+Cam: lateral mais larga, logo sem corte, ajustes antes do foco e confirmação ao reler controles. Voice: mensagem de saída separada dos botões, bandeja sem sobreposição e retorno sem corte. Processamento e drivers preservados; testes de layout não equivalem a um novo benchmark de live.
+
+Para atualizar, use **Sair** no menu da bandeja antes de substituir os arquivos. Preserve o SDK Canon já obtido legalmente; não precisa reinstalar VB-CABLE se já funciona.
+
+[Manuais de marca e kit de identidade](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.1-beta.1/Oruvex-Manuais-e-Identidade-V2.zip) · [Histórico de versões](https://github.com/artssbykira/oruvex-apps/releases)
 
 ## Oruvex Cam
 
