@@ -1,69 +1,71 @@
-# Oruvex — seu sinal. Seu controle.
+# Oruvex - Your signal. Your control.
 
+Focused, native camera and microphone tools for Windows creators who stream and play on the same computer. Design and product direction by João Rodrigues / Kira, with AI-assisted development.
 
-Aplicativos nativos e simples para lives no Windows. Design e direção de produto: João Rodrigues / Kira, com desenvolvimento assistido por IA.
+## Download: 0.2.2-beta.1 - English edition
 
+[Oruvex Cam](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.2-beta.1/Oruvex-Cam-0.2.2-beta.1-Windows.zip) · [Oruvex Voice](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.2-beta.1/Oruvex-Voice-0.2.2-beta.1-Windows.zip) · [Release notes and requirements](https://github.com/artssbykira/oruvex-apps/releases/tag/v0.2.2-beta.1)
 
-## Download: 0.2.1-beta.1
+Experimental betas, free to evaluate. Extract the entire ZIP before running. The Oruvex executables are not code-signed yet: review the download and do not automatically bypass security alerts. Compatibility, performance and latency depend on your system. Test before an important stream.
 
+### What's new
 
-[Oruvex Cam](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.1-beta.1/Oruvex-Cam-0.2.1-beta.1-Windows.zip) · [Oruvex Voice](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.1-beta.1/Oruvex-Voice-0.2.1-beta.1-Windows.zip) · [Release e instruções](https://github.com/artssbykira/oruvex-apps/releases/tag/v0.2.1-beta.1)
+Both apps now have English controls, tray menus and app messages. Cam retains its wider sidebar, fixed header and tray actions, exposure settings before focus, and settings-refresh feedback. Voice retains its separate output-message row, unobstructed tray button and headphone-monitor controls. Capture, decoding, buffers, drivers and RNNoise processing are unchanged. Layout tests are not a new streaming or gaming benchmark.
 
+### Brand guidelines
 
-Beta gratuita para teste, não uma promessa de compatibilidade universal. Extraia o ZIP inteiro antes de executar. Binários ainda sem assinatura de código: não ignore alertas de segurança automaticamente.
+[Oruvex](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.2-beta.1/BRAND_GUIDELINES_ORUVEX_V2_EN.pdf) · [Oruvex Cam](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.2-beta.1/BRAND_GUIDELINES_ORUVEX_CAM_V2_EN.pdf) · [Oruvex Voice](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.2-beta.1/BRAND_GUIDELINES_ORUVEX_VOICE_V2_EN.pdf) · [Complete English brand kit](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.2-beta.1/Oruvex-Brand-Kit-V2-English.zip)
 
-
-## Revisão 0.2.1-beta.1
-
-Cam: lateral mais larga, logo sem corte, ajustes antes do foco e confirmação ao reler controles. Voice: mensagem de saída separada dos botões, bandeja sem sobreposição e retorno sem corte. Processamento e drivers preservados; testes de layout não equivalem a um novo benchmark de live.
-
-Para atualizar, use **Sair** no menu da bandeja antes de substituir os arquivos. Preserve o SDK Canon já obtido legalmente; não precisa reinstalar VB-CABLE se já funciona.
-
-[Manuais de marca e kit de identidade](https://github.com/artssbykira/oruvex-apps/releases/download/v0.2.1-beta.1/Oruvex-Manuais-e-Identidade-V2.zip) · [Histórico de versões](https://github.com/artssbykira/oruvex-apps/releases)
+Three 12-page English manuals covering identity, construction, typography, color, small-scale use and communication. The kit includes official vector assets, icons and supporting fonts with their licenses. Brand examples are illustrative compositions, not screenshots of a running app.
 
 ## Oruvex Cam
 
+Connects to **Canon EOS cameras over USB** using Canon EDSDK, without digiCamControl or OBS Virtual Camera. Displays the detected model and lets you choose between connected Canon cameras. Includes optional preview, lens focus control, supported exposure settings, five saved presets and system-tray operation. Advanced settings are collapsed by default.
 
-Identifica o modelo Canon EOS USB e permite escolher entre as câmeras detectadas. Preview opcional, foco, exposição quando suportada, cinco espaços salvos e bandeja. Ajustes avançados ficam recolhidos.
+**Canon's proprietary SDK DLLs are not included in the public ZIP.** Obtain the **x86 (32-bit)** EDSDK through [Canon's official SDK program](https://www.usa.canon.com/support/sdk), under Canon's terms. In the app, click **Add Canon SDK (x86)**, select the x86 binary folder and restart.
 
+Only **EOS Rebel T7** has been verified in the development environment. Other Canon models are experimental and depend on SDK version, firmware and Live View. Nikon, Sony and ordinary UVC webcams are not supported. Model detection is not a certification of compatibility.
 
-**O ZIP público não inclui as DLLs proprietárias da Canon.** Obtenha o EDSDK pelo [programa oficial da Canon](https://www.usa.canon.com/support/sdk), conforme suas condições. Use “Adicionar SDK da Canon (x86)” e selecione a pasta binária de 32 bits; depois reabra. Não depende de digiCamControl.
+In OBS or TikTok LIVE Studio, select **KCC Camera**. This legacy technical identifier is retained to preserve existing sources; the app is named Oruvex Cam. Virtual camera registration requires administrator rights and must be updated if you move the folder.
 
-
-Apenas **EOS Rebel T7** foi verificada no ambiente de desenvolvimento. Outras Canon dependem do SDK, firmware e Live View: suporte experimental. Não suporta Nikon, Sony ou webcams UVC. No OBS/TikTok, selecione **KCC Camera**, identificador legado preservado para não quebrar fontes existentes.
-
-
-1920×1080/60 pode ampliar e repetir quadros: não garante captura nativa. O modo 1024×576/30 reduz o trabalho de saída. Registro da câmera virtual exige administrador uma vez e após mover a pasta.
-
+The **1920x1080/60** output profile may upscale and repeat frames. It does not guarantee native 1080p60 capture. **1024x576/30** is the lighter profile. The input counter reports frames received from the camera, not a promise of 60 unique frames. Turning preview off stops local drawing, not the resource use of sending video to your streaming app.
 
 ## Oruvex Voice
 
+RNNoise-based microphone noise suppression on the **CPU**, with adjustable strength, an optional gate, headphone monitoring with independent volume and system-tray operation. It does not use CUDA or GPU-based AI processing. That does not mean zero CPU, memory or window-composition cost.
 
-RNNoise na CPU, força ajustável, portão opcional, retorno de teste com volume independente e bandeja. Sem CUDA ou processamento de IA na GPU; não significa consumo zero.
+1. Extract the full ZIP and open **Oruvex Voice.exe**.
+2. If requested, click **Install virtual output**, follow the official VB-CABLE installer and restart Windows. Administrator rights are required.
+3. Select your physical microphone. It must run at **48,000 Hz**, using 16-bit PCM or 32-bit float. If needed, adjust its Windows audio properties.
+4. In OBS/TikTok, select **CABLE Output (VB-Audio Virtual Cable)**. CABLE Input is the playback destination used internally by the app.
+5. Use headphones when you click **Start monitoring** to avoid feedback. Monitoring adds a separate playback path.
+6. **Minimize to system tray** keeps cleanup running; **Exit** stops the app.
 
+**VB-CABLE is VB-Audio donationware**, not a driver created by Oruvex. Its official installer is included without modifications. Its own terms still apply. [Source/download](https://www.vb-cable.com/) · [Participation and licensing](https://vb-audio.com/Services/licensing.htm). Consider supporting VB-Audio if you find its software useful.
 
-Microfone em **48.000 Hz**, PCM 16 bits ou float 32 bits. No OBS/TikTok escolha **CABLE Output (VB-Audio Virtual Cable)**. Se necessário, use “Instalar saída virtual” e reinicie o Windows. Use fones ao testar o retorno.
+## Upgrading
 
+Choose **Exit** from each app's tray menu before replacing files. Extract the full new package. Preserve your legally obtained Canon SDK; do not reinstall VB-CABLE if it already works. Existing preferences remain in the same legacy locations. [Previous releases](https://github.com/artssbykira/oruvex-apps/releases) remain available.
 
-**VB-CABLE é donationware da VB-Audio**, não um driver Oruvex. Instalador oficial incluído sem modificações. Origem, download e participação: https://www.vb-cable.com/ · https://vb-audio.com/Services/licensing.htm
+## Requirements, privacy and testing
 
+Windows 10/11 **x64** and .NET Framework 4.x. Cam runs as x86 for the SDK; Voice runs as x64. Physical device compatibility is required. Native Windows dialogs and hardware device names may use your system language.
 
-## Requisitos, privacidade e testes
+Processing is local. No telemetry or audio/video upload is implemented in these apps. Existing settings are kept in `%LOCALAPPDATA%\K Cam App` and `HKCU\Software\KMNC`. Legacy filenames and identifiers are intentionally preserved. No streaming account or login is required for local processing.
 
+RNNoise uses **10 ms blocks**, but this is not a measurement of end-to-end latency. Resource use, game FPS and audio latency must be evaluated on your own hardware. There is no promise of zero resource use or universal compatibility.
 
-Windows 10/11 x64 e .NET Framework 4.x. Cam usa processo x86; Voice x64. Processamento local, sem telemetria ou envio de voz/imagem a servidor nesta versão. Configurações antigas preservadas em `%LOCALAPPDATA%\K Cam App` e `HKCU\Software\KMNC`.
+Use the release's **SHA256SUMS.txt** to verify file integrity. [Report an issue](https://github.com/artssbykira/oruvex-apps/issues) with Windows version, camera model and SDK version. Review logs before sharing; do not publish serial numbers, private recordings or tokens.
 
+## Credits and conditions
 
-Preview desligado corta o desenho local, não o custo de enviar vídeo. Blocos RNNoise de 10 ms não são uma medida de latência ponta a ponta. Desempenho e compatibilidade variam por máquina. Teste fora de uma live importante.
+Oruvex design and product direction: João Rodrigues / Kira, with AI-assisted execution. Oruvex is not affiliated with or certified by Canon, OBS, NVIDIA, TikTok or VB-Audio.
 
+- Softcam: MIT; license included in the Cam ZIP.
+- RNNoise / Xiph.Org: BSD-3-Clause; license included in the Voice ZIP.
+- NAudio 1.10.0: Microsoft Public License; license included in the Voice ZIP.
+- VB-CABLE: VB-Audio donationware; official package and notices included without modifications.
+- Canon EDSDK: proprietary and **not redistributed** in these betas.
+- Supporting brand fonts: their original Open Font License files are included in the brand kit.
 
-[Relate problemas](https://github.com/artssbykira/oruvex-apps/issues) com modelo, Windows e versão do SDK. Não envie números de série, gravações privadas, tokens ou logs sem revisá-los.
-
-
-## Créditos e condições
-
-
-Softcam (MIT), RNNoise (BSD-3-Clause), NAudio 1.10.0 (Ms-PL) e VB-CABLE (VB-Audio donationware): licenças e créditos nos ZIPs. Canon EDSDK é proprietário e não redistribuído. Sem afiliação ou certificação Canon, OBS, NVIDIA, TikTok ou VB-Audio.
-
-
-Binários Oruvex gratuitos para avaliação, sem garantia de compatibilidade ou desempenho, respeitados os direitos obrigatórios aplicáveis. Licenças dos terceiros continuam independentes. Código-fonte dos apps não está publicado nesta versão.
+Oruvex beta binaries are free to evaluate, without a guarantee of compatibility or performance, subject to any mandatory rights that apply. Third-party terms remain independent. App source code is not published in this repository in this version. The identity assets do not authorize you to represent a modified product as an official Oruvex release.
